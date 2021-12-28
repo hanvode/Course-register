@@ -1,0 +1,19 @@
+<!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+            <div >
+                <a class="navbar-brand" href="{% url 'myadmin:login_success' %}">Home</a>
+            </div>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <ul class="collapse navbar-nav navbar-collapse" id="navbarContent">
+                <li class="nav-item"><a class="nav-link">{{ admin_data.username|capfirst }}</a></li>
+                <li class="nav-item"><a href="{% url 'myadmin:schedule_new_batches' %}" class="nav-link">Schedule New Batches</a></li>
+                <li class="nav-item"><a href="{% url 'myadmin:view_scheduled_batches' %}" class="nav-link">New Batches</a></li>
+                <li class="nav-item"><a href="{% url 'myadmin:add_course' %}" class="nav-link">Add Courses</a></li>
+                <li class="nav-item"><a class="nav-link">View Courses</a></li>
+                <li class="nav-item"><a href="{% url 'myadmin:faculty' %}" class="nav-link">Faculty</a></li>
+                <li class="nav-item"><a href="{% url 'myadmin:admin_logout' %}" class="nav-link">Logout</a></li>
+            </ul>
+        </nav>
